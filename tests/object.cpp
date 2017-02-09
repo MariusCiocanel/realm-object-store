@@ -132,7 +132,7 @@ TEST_CASE("object") {
             {"data", PropertyType::Data},
             {"date", PropertyType::Date},
             {"object", PropertyType::Object, "link target", "", false, false, true},
-            {"array", PropertyType::Array, "array target"},
+            {"array", PropertyType::Array|PropertyType::Object, "array target"},
         }},
         {"link target", {
             {"value", PropertyType::Int},
@@ -143,11 +143,11 @@ TEST_CASE("object") {
             {"value", PropertyType::Int},
         }},
         {"pk after list", {
-            {"array 1", PropertyType::Array, "array target"},
+            {"array 1", PropertyType::Array|PropertyType::Object, "array target"},
             {"int 1", PropertyType::Int},
             {"pk", PropertyType::Int, "", "", true},
             {"int 2", PropertyType::Int},
-            {"array 2", PropertyType::Array, "array target"},
+            {"array 2", PropertyType::Array|PropertyType::Object, "array target"},
         }},
     };
     config.schema_version = 0;

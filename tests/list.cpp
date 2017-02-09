@@ -45,13 +45,13 @@ TEST_CASE("list") {
     r->update_schema({
         {"origin", {
             {"pk", PropertyType::Int, "", "", true},
-            {"array", PropertyType::Array, "target"}
+            {"array", PropertyType::Array|PropertyType::Object, "target"}
         }},
         {"target", {
             {"value", PropertyType::Int}
         }},
         {"other_origin", {
-            {"array", PropertyType::Array, "other_target"}
+            {"array", PropertyType::Array|PropertyType::Object, "other_target"}
         }},
         {"other_target", {
             {"value", PropertyType::Int}
