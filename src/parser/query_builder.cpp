@@ -17,15 +17,15 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include "query_builder.hpp"
-#include "parser.hpp"
 
+#include "object_schema.hpp"
 #include "object_store.hpp"
+#include "parser.hpp"
 #include "schema.hpp"
 #include "util/compiler.hpp"
 #include "util/format.hpp"
 
 #include <realm.hpp>
-#include <assert.h>
 #include <sstream>
 
 using namespace realm;
